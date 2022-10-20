@@ -16,44 +16,65 @@
     <button>button 4</button>
     <h1>Header 1</h1>
     fill in text <input type="text">
-    <div class="fancyOverskrift">Tools</div>
-    <div class="fancy">The 2 most important tools we need are as follows:
-        <ul>
-            <li> Code editing program <a href="https://code.visualstudio.com/" target="_new">Visual Studio Code</a>.
-                <br /> We are gonna use som <i> extensions</i>:
-            </li>
+    <div class="fancyOverskrift" onclick="card1()">Tools</div>
+    <div id="card1">
 
+    </div>
+    <div class="fancyOverskrift" onclick="card2()">Head Body Legs</div>
+    <div id="card2">
+
+    </div>
+
+    <script>
+        function blank() {
+            document.getElementById('card1').innerHTML = ''
+            document.getElementById('card2').innerHTML = ''
+        }
+        function card1() {
+            blank()
+            document.getElementById('card1').innerHTML = `
+            <div class="fancy">The 2 most important tools we need are as follows:
             <ul>
-                <li>JavaScript-booster</li>
-                <li>es6-string.html</li>
-                <li>live-server</li>
-                <li>live-share</li>
-            </ul>
-        </ul>
-        <ul>
-            <li>Browser <a href="https://www.google.com/intl/no/chrome/" target="_new">Google Chrome</a></li>
-        </ul>
-    </div>
-    <div class="fancyOverskrift">Head Body Legs</div>
-<div class="fancyImg">
-     <div>
-        <button>◀</button>
-        <img src="img\head1.png">
-        <button>▶</button>
-    </div>
-    <div>
-        <button>◀</button>
-        <img src="img\body1.png">
-        <button>▶</button>
-    </div>
-    <div>
-        <button>◀</button>
-        <img src="img\legs1.png">
-        <button>▶</button>
-    </div>
-</div>
-   
+                <li> Code editing program <a href="https://code.visualstudio.com/" target="_new">Visual Studio Code</a>.
+                    <br /> We are gonna use som <i> extensions</i>:
+                </li>
 
+                <ul>
+                    <li>JavaScript-booster</li>
+                    <li>es6-string.html</li>
+                    <li>live-server</li>
+                    <li>live-share</li>
+                </ul>
+            </ul>
+            <ul>
+                <li>Browser <a href="https://www.google.com/intl/no/chrome/" target="_new">Google Chrome</a></li>
+            </ul>
+        </div>`;
+        }
+        function card2() {
+            blank()
+            document.getElementById('card2').innerHTML = /*HTML*/`
+            <div class="fancyImg">
+            <div>
+                <button>◀</button>
+                <img src="img\head1.png">
+                <button>▶</button>
+            </div>
+            <div>
+                <button>◀</button>
+                <img src="img\body1.png">
+                <button>▶</button>
+            </div>
+            <div>
+                <button>◀</button>
+                <img src="img\legs1.png">
+                <button>▶</button>
+            </div>
+        </div>`;
+
+        }
+
+    </script>
 
 </body>
 
