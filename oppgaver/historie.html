@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velg ord historie</title>
+    <style>
+        div.historie {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="setFarge(this)">svart </button>
+        <button onclick="setFarge(this)">rød  </button>
+        <button onclick="setFarge(this)">gul  </button>
+    </div>
+    <div>
+        <button onclick="setDyr(this)">ku </button>
+        <button onclick="setDyr(this)">elefant </button>
+        <button onclick="setDyr(this)">krokodille </button>
+    </div>
+    <div class="historie">
+        <div>det var en gang en&nbsp;</div>
+        <div id="farge">..... </div>
+        <div>&nbsp;</div>
+        <div id="dyr">..... </div>
+        <div>&nbsp;som noe interesant</div>
+    </div>
+    <script>
+        var dyr = "dyr"
+        var farge = "farge"
+        function setDyr(eleDyr) {
+            dyr = eleDyr.innerHTML
+            document.getElementById('dyr').innerHTML = dyr
+        }
+        function setFarge(eleFarge) {
+            farge = eleFarge.innerHTML
+            document.getElementById('farge').innerHTML = farge
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
