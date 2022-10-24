@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trafikklys</title>
+    <style>
+        #trafikklys {
+            width: 210px;
+            height: 550px;
+            background-color: #151414;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 5px;
+        }
+
+        .rød {
+            background-color: rgb(255, 0, 0);
+            opacity: 20%;
+        }
+
+        .gul {
+            background-color: rgb(255, 213, 0);
+            opacity: 20%;
+        }
+
+        .grønn {
+            background-color: green;
+            opacity: 20%;
+        }
+
+        .sirkel {
+
+            height: 150px;
+            width: 150px;
+            border-radius: 40%;
+
+        }
+
+        .active {
+            opacity: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="trafikklys">
+        <div id="rød" class="rød sirkel"></div>
+        <div id="gul" class="gul sirkel"></div>
+        <div id="grønn" class="grønn sirkel"></div>
+    </div>
+
+    <button onclick=";lys=1 ;setLys()">rød</button>
+    <button onclick=";lys=2 ;setLys()">rød og orange</button>
+    <button onclick=";lys=3 ;setLys()">grønn</button>
+    <button onclick=";lys=4 ;setLys()">orange</button>
+
+    <script>
+        var lys = 0
+        function setLys() {
+            if (lys == 1) {
+                ; lysAv()
+                document.getElementById("rød").classList.add("active");
+            }
+            if (lys == 2) {
+                ; lysAv()
+                document.getElementById("rød").classList.add("active");
+                document.getElementById("gul").classList.add("active");
+            }
+            if (lys == 3) {
+                ; lysAv()
+                document.getElementById("grønn").classList.add("active");
+            }
+            if (lys == 4) {
+                ; lysAv()
+                document.getElementById("gul").classList.add("active");
+            }
+        }
+        function lysAv() {
+            document.getElementById("rød").classList.remove("active");
+            document.getElementById("gul").classList.remove("active");
+            document.getElementById("grønn").classList.remove("active");
+        }
+
+    </script>
+
+</body>
+
+</html>
