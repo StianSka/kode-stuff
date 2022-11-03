@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kroko spill style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //moddel
+        let poeng = 0;
+        let tall1 = '';
+        let inputTegn = '';
+        let tall2 = '';
+
+
+
+        //view
+        generateNum()
+        uppdateView()
+        function uppdateView() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <div>Poeng&nbsp;${poeng}</div>
+                <div>${tall1}</div>
+                <input id="innP" type="text">
+                <div>${tall2}</div>
+                <div class="buttons">
+                 <button onclick="getText()">Submit</button>
+                 <button onclick="res()">Reset</button>
+                </div>
+                `;
+        }
+
+        //controller
+
+        function getText() {
+            inputTegn = document.getElementById('innP').value
+            console.log(inputTegn)
+            chekStuff()
+        }
+        function generateNum() {
+            tall1 = Math.ceil(Math.random() * 10);
+            tall2 = Math.ceil(Math.random() * 10);
+        }
+        function chekStuff() {
+            if (tall1 < tall2 && inputTegn === '<') {
+                poeng = poeng + 1
+                generateNum()
+                uppdateView()
+            } else if (tall1 > tall2 && inputTegn === '>') {
+                poeng = poeng + 1
+                generateNum()
+                uppdateView()
+            } else if (tall1 == tall2 && inputTegn === '=') {
+                poeng = poeng + 1
+                generateNum()
+                uppdateView()
+            } else {
+                poeng = poeng - 1
+                generateNum()
+                uppdateView()
+            }
+        }
+        function res() {
+            poeng = 0
+            generateNum()
+            uppdateView()
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

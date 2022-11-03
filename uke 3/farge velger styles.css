@@ -1,0 +1,40 @@
+.main {
+    height: 500px;
+    width: 80%;
+}
+
+.sub {
+    margin: 1%;
+    height: 100px;
+    width: 10%;
+}
+.exDiv {
+    margin: 1%;
+    height: 20px;
+    width: 100%;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+.select{
+    border: 5px;
+    border-color: black;
+    border: dashed;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}

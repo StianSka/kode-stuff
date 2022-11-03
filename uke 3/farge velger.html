@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="farge velger styles.css">
+
+</head>
+
+<body>
+    <div class="row">
+        <div id="red" class="sub red select" onclick="first('red'),thisColor('red')"></div>
+        <div id="yellow" class="sub yellow" onclick="first('yellow'),thisColor('yellow')"></div>
+        <div id="blue" class="sub blue" onclick="first('blue'),thisColor('blue')"></div>
+        <button onclick="aplly()">aplly</button>
+    </div>
+        
+        <div id="main" class="main grey" onclick="chooseDis('main')"></div>
+        <div id="div1" class="exDiv" onclick="chooseDis('div1')">hei</div>
+        <div id="div2" class="exDiv" onclick="chooseDis('div2')">halo</div>
+    
+
+    <script>
+        var color = ('red');
+        var selected = ('');
+        var firstTime = true
+        var chosenDiv = ('main');
+
+
+        function first(id) {
+            if (firstTime == true) {
+                selected = id
+                document.getElementById('red').classList.remove('select')
+                document.getElementById(selected).classList.add('select')
+                firstTime = false
+            } else {
+                document.getElementById(selected).classList.remove('select')
+
+            }
+        }
+        function chooseDis(kjennemerke){
+            chosenDiv = kjennemerke
+            console.log(chosenDiv)
+        }
+        function aplly() {
+            document.getElementById(chosenDiv).classList.remove('grey', 'green', 'red', 'blue')
+            document.getElementById(chosenDiv).classList.add(color)
+        }
+        function thisColor(name) {
+            color = name
+            selected = name
+            document.getElementById(selected).classList.add('select')
+        }
+
+    </script>
+</body>
+
+</html>
