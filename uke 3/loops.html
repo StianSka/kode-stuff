@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(207, 135, 108);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+</body>
+
+<script>
+    //model
+    let innTekst = '';
+    let a = 0;
+    let e = 0;
+    let i = 0;
+    let o = 0;
+    let u = 0;
+    let y = 0;
+    let æ = 0;
+    let ø = 0;
+    let å = 0;
+    //view
+    show()
+    function show() {
+        document.getElementById('app').innerHTML = //html
+            `
+                <input id="intput"  type="text">
+                <button onclick="chekVokal()">yoho</button>
+                <div id="dass">a${a}e${e}i${i}o${o}u${u}y${y}æ${æ}ø${ø}å${å}</div>
+             `;
+
+    }
+    //controller
+    function chekVokal() {
+        innTekst = document.getElementById('intput').value
+        let tilfel
+        for (let tell = 0; tell < innTekst.length; tell++) {
+            tilfel = innTekst.charAt(tell)
+            if (tilfel == 'a') {
+                a = a + 1
+            }
+            else if (tilfel == 'e') {
+                e = e + 1
+            }
+            else if (tilfel == 'i') {
+                i = i + 1
+            }
+            else if (tilfel == 'o') {
+                o = o + 1
+            }
+            else if (tilfel == 'u') {
+                u = u + 1
+            }
+            else if (tilfel == 'y') {
+                y = y + 1
+            }
+            else if (tilfel == 'æ') {
+                æ = æ + 1
+            }
+            else if (tilfel == 'ø') {
+                ø = ø + 1
+            }
+            else if (tilfel == 'å') {
+                å = å + 1
+            }
+        }
+        show()
+    }
+
+</script>
+
+</html>
