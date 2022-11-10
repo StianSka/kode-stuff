@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="eaqule"></div>
+    <button onclick="gorng()">go RNG</button>
+   
+    <script>
+            // &nbsp; brukes til og force mellomrom i html 
+        let krek = 0
+        function gorng() {   //ikke helt det oppgaven ville men jeg fant resultatet av det her intersant. Den har gitt meg noen ideer
+            let tal1 = 0
+            let tal2 = 1
+
+            while (tal1 != tal2) {
+                tal1 = Math.ceil(Math.random() * 5);
+                tal2 = Math.ceil(Math.random() * 5);
+                krek++
+            }
+            document.getElementById('eaqule').innerHTML = krek  
+
+        }
+
+    </script>
+</body>
+
+</html>

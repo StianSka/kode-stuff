@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(103, 91, 91);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <button onclick="settBase(20,30,15)">ork</button>
+    <button onclick="settBase(30,15,25)">elf</button>
+
+    <script>
+        //model
+        var atk = 0;
+        var hp = 0;
+        var spd = 0;
+
+        //view
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <div>atk:&nbsp;${atk}</div>
+                <div>hp:&nbsp;${hp}</div>
+                <div>spd:&nbsp;${spd}</div>
+            `;
+        }
+        //Controll
+        function settBase(atkV, hpV, spdV) {
+            atk = atkV + levelUp();
+            hp = hpV + levelUp();
+            spd = spdV +levelUp();
+            show()
+
+        }
+
+        function levelUp() {
+            let tal1 = 0
+            let tal2 = 1
+            let stat = 0
+            while (tal1 != tal2) {
+                tal1 = Math.ceil(Math.random() * 4);
+                tal2 = Math.ceil(Math.random() * 4);
+                stat++
+            }
+            return stat;
+        }
+
+    </script>
+</body>
+
+</html>

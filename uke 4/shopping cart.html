@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script>
+        //model
+        let cart = [];
+        let index = 0;
+        let tekstCart = '';
+        //view
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <div>
+                    <h1>shopping cart</h1>
+                    </div id="liste">${tekstCart}</div> 
+                    <input id="intPut" type="text">
+                     <button onclick="fyll()">faen</button>
+                </div>
+                
+            `;
+        }
+
+        //controll
+        function fyll() {
+            cart.push(document.getElementById('intPut').value)
+            console.log(cart)
+            tekstCart += /*html*/ `<li>${cart[index]}</li>`;
+            index = index + 1
+            show()
+        }
+        function skriv() {
+            tekstCart += /*html*/ `<li>${cart[index]}</li>`;
+            index = index + 1
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
