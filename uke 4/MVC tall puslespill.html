@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
+        .box {
             color: blue;
             background-color: azure;
             padding: 10px;
@@ -21,13 +21,22 @@
         div.førstPåLinja {
             clear: left;
         }
+        .main{
+            display: grid;
+            grid-template-columns: 70px 70px 70px;
+            grid-template-rows: 70px 70px 70px;
+
+             
+        }
     </style>
 </head>
 
 <body>
-    <div id="app"></div>
-
+    <div id="app" class="main" ></div>
+   
     <script>
+
+
         //model
 
         //view
@@ -35,39 +44,21 @@
         function show() {
             document.getElementById('app').innerHTML = //html
                 `
-                <div id="r1k1" onclick="trykk(this, 'r2k1', 'r1k2', '_', '_')">7</div>
-                <div id="r1k2" onclick="trykk(this, 'r1k1', 'r2k2','r1k3')">1</div>
-                <div id="r1k3" onclick="trykk(this, 'r1k2', 'r2k3')">2</div>
-                <div id="r2k1" class="førstPåLinja" onclick="trykk(this, 'r2k2', 'r1k1', 'r3k1')">5</div>
-                <div id="r2k2" onclick="trykk(this, 'r2k1','r1k2','r2k3','r3k2')"></div>
-                <div id="r2k3" onclick="trykk(this, 'r1k3','r2k2','r3k3')">3</div>
-                <div id="r3k1" class="førstPåLinja" onclick="trykk(this, 'r2k1','r3k2' )">8</div>
-                <div id="r3k2" onclick="trykk(this, 'r3k1', 'r2k2', 'r3k3')">4</div>
-                <div id="r3k3" onclick="trykk(this, 'r3k2', 'r2k3' )">6</div>
+                
+                <div class="box" onclick="">7</div>
+                <div class="box" onclick="">1</div>
+                <div class="box" onclick="">2</div>
+                <div class="box" onclick="">5</div>
+                <div class="box" onclick=""></div>
+                <div class="box" onclick="">3</div>
+                <div class="box" onclick="">8</div>
+                <div class="box" onclick="">4</div>
+                <div class="box" onclick="">6</div>
+                
                 `;
         }
         //controller
-        function trykk(tagElement, alt1, alt2, alt3, alt4) {
-            if (document.getElementById(alt1).innerHTML == '') {
-                document.getElementById(alt1).innerHTML = tagElement.innerHTML;
-                tagElement.innerHTML = '';
-
-            }
-            if (document.getElementById(alt2).innerHTML == '') {
-                document.getElementById(alt2).innerHTML = tagElement.innerHTML;
-                tagElement.innerHTML = '';
-            }
-
-            if (document.getElementById(alt3).innerHTML == '') {
-                document.getElementById(alt3).innerHTML = tagElement.innerHTML;
-                tagElement.innerHTML = '';
-            }
-            if (document.getElementById(alt4).innerHTML == '') {
-                document.getElementById(alt4).innerHTML = tagElement.innerHTML;
-                tagElement.innerHTML = '';
-            }
-            show()
-        }
+       
 
 
     </script>

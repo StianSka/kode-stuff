@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(103, 91, 91);
+    }
+</style>
+<body>
+    <div id="app"></div>
+
+
+
+    <script>
+        //model
+        let tall1 =2;
+        let tall2 =[5,6];
+        let tall3 =0;
+
+
+        //view
+        show()
+            function show(){
+                document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="hey(3)">tell fast</button>
+                <button onclick="hey(tall1)">tell variabel</button>
+                <button onclick="hey(tall2[0])">tell array0</button>
+                <button onclick="hey(tall2[1])">tell array1</button>
+                `;
+            }
+        //controller
+  
+function hey(kult){
+    kult = kult +4
+    console.log(kult)
+    console.log(tall1)
+    console.log(tall2[0],tall2[1])
+    show()
+
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
