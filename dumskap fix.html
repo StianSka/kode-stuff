@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="deacrese(0)">0</button>
+<button onclick="deacrese(1)">1</button>
+<button onclick="deacrese(2)">2</button>
+<button onclick="stopIt(0)">stop1</button>
+<button onclick="stopIt(1)">stop2</button>
+<button onclick="stopIt(2)">stop3</button>
+
+
+<script>
+let var1 = 22
+let var2 = 55
+let var3 = 68
+let arrayTest = [var1,var2,var3]
+let intervalArray = []
+
+//arrayTest.push(var1)
+//arrayTest.push(var2)
+//arrayTest.push(var3)
+
+intervalArray[0] = setInterval(deacrese, 900,0);
+intervalArray[1] = setInterval(deacrese, 900,1);
+intervalArray[2] = setInterval(deacrese, 900,2);
+
+function deacrese(tall){
+    arrayTest[tall]--
+    console.log(arrayTest)
+}
+function stopIt(tell){
+    clearInterval(intervalArray[tell])
+}
+</script>
+</body>
+</html>

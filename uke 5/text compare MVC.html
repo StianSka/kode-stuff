@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+        let txt1 = 'Per'
+        let txt2 = 'Pål'
+        let txt3 = 'Espen'
+        let txtp  = '';
+       
+
+        //view
+             function show1(){
+                document.getElementById('app').innerHTML = //html
+                `
+                <p>Ferdighet 9b - Valgsetninger - Sammenligne to tekster</p>
+                <p>${txtp}</p>
+                <p>Endre på tekstene trykk "enter" for å Sammenligne (Prøv også å fylle ut tall: 11, 101, 102)</p>
+                <input type="text" onchange="txt1=this.value, checkTxt()" value=${txt1} /><br />
+                <input type="text" onchange="txt2=this.value, checkTxt()" value=${txt2} /><br />
+                <input type="text" onchange="txt3=this.value, checkTxt()" value=${txt3} /><br />
+                `;
+            }
+          
+            checkTxt()
+           
+
+         //controller
+        function checkTxt(){        //dose not check until enter is presed og txt field loses focus
+             txtp = '';
+            if (txt1 == txt2) txtp += 'Tekst 1 og 2 er like<br/>';
+            if (txt1 != txt2) txtp += '<del>Tekst 1 og 2 er like</del><br/>';
+            if (txt1 == txt3) txtp += 'Tekst 1 og 3 er like<br/>';
+            if (txt1 != txt3) txtp += '<del>Tekst 1 og 3 er like</del><br/>';
+            if (txt3 == txt2) txtp += 'Tekst 2 og 3 er like<br/>';
+            if (txt3 != txt2) txtp += '<del>Tekst 2 og 3 er like</del><br/>';
+
+            txtp += 'Om vi sorterer de tre tekstene, er denne den første:<br/>';
+            if (txt1 <= txt2) {
+                if (txt3 <= txt1) txtp += txt3;
+                else txtp += txt1;
+            } else {
+                if (txt3 <= txt2) txtp += txt3;
+                else txtp += txt2;
+            }
+            show1()
+        }
+
+    </script>
+</body>
+</html>

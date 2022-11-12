@@ -21,9 +21,7 @@
         let tall1 =2;
         let tall2 =[5,6];
         let tall3 =0;
-
-
-        //view
+         //view
         show()
             function show(){
                 document.getElementById('app').innerHTML = //html
@@ -32,6 +30,7 @@
                 <button onclick="hey(tall1)">tell variabel</button>
                 <button onclick="hey(tall2[0])">tell array0</button>
                 <button onclick="hey(tall2[1])">tell array1</button>
+                <button onclick="dumbAdition()">${tall3}</button>
                 `;
             }
         //controller
@@ -42,7 +41,10 @@ function hey(kult){
     console.log(tall1)
     console.log(tall2[0],tall2[1])
     show()
-
+}
+function dumbAdition(){
+    tall3 -=-1
+    show()
 }
 
 
