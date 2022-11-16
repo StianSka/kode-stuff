@@ -1,5 +1,6 @@
 //notater:
 //shiny odds 1/8192 
+// ikke ferdig 
 
 //model
     let partyShow = false ;                             //party open/close variable
