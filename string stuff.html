@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+
+    <script>
+        //model
+            let textString = "kaaa kaaa i'm a \"Reshiram\"";
+            let textLength;
+            let tallLengde = 26;
+            let eaqule;
+            let sliced;
+            let character;
+            let forReversed;
+            let whileReversed;
+            
+            
+
+
+        //view
+            function show(){
+                document.getElementById('app').innerHTML = //html
+                `
+                <div>${textString}</div><br>
+                <div>${textLength}</div><br>
+                <div>${eaqule}</div><br>
+                <div>${sliced}</div><br>
+                <div>${character}</div><br>
+                <div>${forReversed}</div><br>
+                <div>${whileReversed}</div><br>
+                <button onclick="checkLength()">length</button>
+                <button onclick="checkType()">check type</button>
+                <button onclick="sliceIt()">slice</button>
+                <button onclick="bigLetters()">upper</button>
+                <button onclick="smolLetters()">lower</button>
+                <button onclick="letterAt()">char at</button>
+                <button onclick="forReversText()">for flip</button>
+                <button onclick="whileReverseText()">while flip</button>
+                `;
+            }
+            show()
+        //controller
+        function whileReverseText(){
+            let e = textString.length 
+            let temporary2 = '';
+            while(e > -1){
+                temporary2 += textString.charAt(e)
+                e--
+            }
+            whileReversed = temporary2
+            show()
+
+        }
+        function forReversText(){
+            let temporary1 = '';
+            for(let i = textString.length; i > -1 ; i-- ){
+                temporary1 += textString.charAt(i)
+            }
+            forReversed = temporary1
+            show()
+        }
+        function letterAt(){
+            character = textString.charAt(17)
+            show()
+        }
+        function smolLetters(){
+            textString = textString.toLowerCase()
+            show()
+        }
+        function bigLetters(){
+            textString = textString.toUpperCase()
+            show()
+        }
+    
+        function sliceIt(){
+            sliced = textString.slice(10)
+            show()
+        }
+        function checkLength(){
+            textLength = textString.length;
+            show();
+        }
+       function checkType(){
+            if(textLength === tallLengde){
+                eaqule = true;
+            }else{
+                eaqule = false;
+            }
+            show()
+       }
+
+    </script>
+</body>
+</html>
