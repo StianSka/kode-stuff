@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .sele{
+            width: 87px;
+            height: 87px;
+            background-color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+       
+        <select name="colors" id="color" onchange="selCol = this.value, uppBack()">
+            <option value="black">svart</option>
+            <option value="darkblue">mørke blå</option>
+            <option value="lightgray">lyse grå</option>
+            <option value="lightgreen">lyse grønn</option>
+            <option value="lightcoral">lyse rød</option>
+        </select>
+   
+    <script>
+        //model
+        let selCol = "black";
+        let useCol = "white";
+
+        //view
+            function show(){
+                document.getElementById('app').innerHTML = //html
+                `
+                    <div style="background-color:${selCol};" class="sele"></div>
+                `;
+            }
+            show()
+         //controller
+         function uppBack(){
+            if(selCol == "black" || selCol == "darkblue"){
+                useCol = "white";
+                console.log(useCol)
+            }else{
+                useCol = "black";
+                console.log(useCol)
+            }
+          document.body.style.background = useCol;
+            show()
+         }
+
+    </script>
+<body>
+</html>

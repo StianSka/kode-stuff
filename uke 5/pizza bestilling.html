@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+        
+
+    <script>
+        //model
+        let disableButton = "disabled";
+        let partSelected = [false,false,false,false];
+        let selectedStuff = ['','','','']
+        let infoText = ['Du har ikke vlagt bunn','Du har ikke vlagt fyll',
+        'Du har ikke vlagtstørelse','Du har ikke vlagt form'];
+
+       
+
+    
+        //view
+            function show(){
+                document.getElementById('app').innerHTML = //html
+                `
+                <h3>Pizza-bestilling</h3>
+                <div>Gjør ett valg på hver linje:</div>
+                
+                <br>
+                Bunn:
+                <input type="radio" name="bottom" onchange="checkPart(0,'tykk',0)" ${selectedStuff[0] == "tykk" ? "checked" : ""}>tykk
+                <input type="radio" name="bottom" onchange="checkPart(0,'tynn',0)" ${selectedStuff[0] == "tynn" ? "checked" : ""}>tynn
+                <br>
+                Fyll:
+                <input type="radio" name="fill" onchange="checkPart(1,'taco',1)" ${selectedStuff[1] == "taco" ? "checked" : ""}>taco
+                <input type="radio" name="fill" onchange="checkPart(1,'kylling',1)" ${selectedStuff[1] == "kylling" ? "checked" : ""}>kylling
+                <input type="radio" name="fill" onchange="checkPart(1,'pepperoni',1)" ${selectedStuff[1] == "pepperoni" ? "checked" : ""}>pepperoni
+                <input type="radio" name="fill" onchange="checkPart(1,'marinert biff',1)" ${selectedStuff[1] == "marinert biff" ? "checked" : ""}>marinert biff
+                <br>
+                Størrelse:
+                <input type="radio" name="size" onchange="checkPart(2,'liten',2)" ${selectedStuff[2] == "liten" ? "checked" : ""}>liten
+                <input type="radio" name="size" onchange="checkPart(2,'medium',2)" ${selectedStuff[2] == "medium" ? "checked" : ""}>medium
+                <input type="radio" name="size" onchange="checkPart(2,'stor',2)" ${selectedStuff[2] == "stor" ? "checked" : ""}>stor
+                <br>
+                Type:
+                <input type="radio" name="shape" onchange="checkPart(3,'firkant',3)" ${selectedStuff[3] == "firkant" ? "checked" : ""}>firkant
+                <input type="radio" name="shape" onchange="checkPart(3,'sirkel',3)" ${selectedStuff[3] == "sirkel" ? "checked" : ""}>sirkel
+                <br>
+                <button ${disableButton} onclick="alert('Håper det smaker')">bestil</button>
+                <div id="info">
+                   
+            
+                </div>
+                `;
+            }
+        show()
+        //controller
+        function checkPart(toChange,sel,arSlot){
+            partSelected[toChange] = true;
+            selectedStuff[arSlot] = sel;
+            infoText[arSlot] = 'du har valgt'+' '+sel
+            showSelected()
+            
+            if(partSelected[0,1,2,3] == true){
+                disableButton ='';
+                show()
+                showSelected()
+
+            }
+            function showSelected(){
+                document.getElementById('info').innerHTML = //html
+                `
+                    Dine valg: <br>
+                    Bunn: ${infoText[0]} <br>
+                    Fyll: ${infoText[1]} <br>
+                    Størrelse: ${infoText[2]} <br>
+                    Form: ${infoText[3]} <br>
+                `;
+            }
+        }
+       
+    </script>
+</body>
+</html>
