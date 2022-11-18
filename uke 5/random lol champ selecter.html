@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+   
+
+    <script>
+//model
+    let thisOne = ''; 
+    // alle champs jeg er villig til å spille sansynligvis
+    let champs = ['bard','blitzcrank','amumu','zilean','vel koz','thresh','garen','lee sin','warwick','vayne',
+    'miss fortune','draven','dr.mundo','morgana','shaco','jihn','ezreal','jayce','jax','alistar','zed','urgot',
+    'taric','nasus', 'ziggs','wukong','anivia','cho gath','tryndamere','malphite','talon','gangplank','gragas',
+    'maokai','camille','udyr','shen','varus','jarvan iv','pantheon','trundle','vi','fizz','hecarim','braum',
+    'ornn','poppy','riven','xin zhao','senna','viktor','olaf','irelia','fiora','kalista','akali','sivir',
+    'quinn','qiyana','neeko','zeri','sylas','lillia','syndra','sett','aatrox','vex','leblanc','mordekaiser',
+    'diana','akshan','apheliios','nilah','azir','gwen','rek sai','viego','bel veth','k.sante','samira','seraphine','try again'];
+//view
+show()
+    function show(){
+        document.getElementById('app').innerHTML = //html
+        `
+        <button onclick="randomChamp()">random champ plz</button>
+            <div>${thisOne}</div>
+
+        `;
+    }
+//controller
+function randomChamp(){
+    let tempRng = Math.floor(Math.random()*champs.length)
+    thisOne = champs[tempRng]
+    show()
+}
+    </script>
+</body>
+</html>

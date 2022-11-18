@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+   <div ></div>
+<script>
+   let inputText;
+   let vokaler =['a','e']
+   
+
+function show(){
+    document.getElementById('app').innerHTML = //html
+    `
+    <input type="text" onchange="getText(this.value)" >
+    <button onclick="getLength()">1</button>
+    <button onclick="checkVokaler()">2</button>
+    <button onclick="ting2()">3</button>  
+    `;
+}
+show()
+
+function getText(tekst){
+inputText= tekst 
+}
+function getLength(){
+ temp = inputText.length
+    
+}
+function checkVokaler(){
+    let temp2 = 0;
+    let temp3
+for(let i = inputText.length; i>-1; i--){
+temp3 = inputText.charAt(i)
+    if (temp3 == vokaler[0] || temp3 == vokaler[1])
+    temp2++
+}
+console.log(temp2)
+} 
+function ting(){
+    let twmp='';
+    let temp4='';
+    for(let i = inputText.length; i>-1; i--){
+        twmp = inputText.charAt(i)
+        if (twmp != vokaler[0] && twmp != vokaler[1]){
+            temp4 += twmp
+        }
+    }
+    console.log(temp4)
+}
+function ting2(){                               //lagt til i ettertid
+    let temp5 = inputText.length
+    let i=0
+    let waht
+    let toPtint= '';
+    while (i<temp5){
+        waht = inputText.charAt(i)
+        if (waht != vokaler[0] && waht != vokaler[1]){
+            toPtint += waht
+        }
+        i++
+    }
+    console.log(toPtint)
+}
+
+
+
+</script>
+
+</body>
+</html>
