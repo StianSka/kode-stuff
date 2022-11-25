@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+    <script>
+        //model
+        let youngGreetings = ["Halla Kompis Fet Buss", "Nice buss boss", "We love Fortnite"];
+        let middleAged = ["placeholder voksen1", "placeholder voksen2"];
+        let oldFucks = ["25 Kr, da jeg var ung da kosta det bare 5 øre.", "placeholder pensjonist"];
+        let characterAge = [];
+        let amountPeople = 0;
+        let Greet = '';
+        let toCheck;
+        let score = 0;
+
+
+        //view
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <div>${score}</div>
+                <div>${Greet}</div>
+                <select class="select"  onchange="checkAnwsers(this.value)"> 
+                     <option value="" disabled selected hidden>Velg Aldersgruppe</option>
+                     <option value="1">Ung</option>
+                     <option value="2">Voksen</option>
+                     <option value="3">Pensjonist</option>
+        `;
+        }
+        show()
+        //controller
+        function doMath(max,min){
+            let tempResult = Math.floor(Math.random() * max)
+            if(tempResult < min){
+            while (tempResult < min){
+                tempResult = Math.floor(Math.random() * max)
+                }
+            }
+            //console.log(tempResult)
+            return (tempResult) 
+        }
+        function people() {
+            amountPeople = doMath(6,2);
+            let index = 0;
+            let alder = 0;
+            while(index < amountPeople) {
+                 alder = doMath(4, 1);
+                 characterAge.push(alder);
+                 index++;
+            } 
+            conversation()
+        }
+        function conversation() {
+            let tempLenght = characterAge.length -1
+            Greet = '';
+            
+            if (tempLenght >= 0) {
+                if(characterAge[tempLenght]==3){
+                Greet = oldFucks[doMath(oldFucks.length,0)]
+                toCheck = characterAge.pop()         
+                }
+                else if(characterAge[tempLenght]==2){
+                Greet = middleAged[doMath(middleAged.length,0)]
+                toCheck = characterAge.pop() 
+                }
+                else if(characterAge[tempLenght]==1){
+                Greet = youngGreetings[doMath(youngGreetings.length,0)]
+                toCheck = characterAge.pop() 
+                }
+            }
+            
+            show()
+        }
+        function checkAnwsers(element){
+                if(element == toCheck){
+                    score++;
+                    conversation();
+                }
+                else{
+                    score--;
+                    conversation(); 
+                }
+                if (characterAge[0] == undefined) {
+                    console.log("letsa go")
+                // bussTop = 1500;
+                // bussStopMove();
+                // startDriving();
+            }
+        }
+        
+        
+    </script>
+</body>
+
+</html>

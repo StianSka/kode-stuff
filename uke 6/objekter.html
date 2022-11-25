@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+//her har jeg kikka litt på objekter 
+
+
+// let name1 = "Reshiram";
+// let level1 = 50;
+// let type1 = "fire";
+
+// let name2 = "Zecrom";
+// let level2 = 50;
+// let type2 = "electric";
+
+// let name3 = "Kyrum";
+// let level3 = 70;
+// let type3 = "ice";
+
+// let levelUp = function(level){
+//     return ++level;
+// } 
+
+
+// let pokemon = new Object();
+
+// pokemon.name = "Reshiram";
+// pokemon.level = 50;
+// pokemon.type = "fire";
+// pokemon.levelUp = function(){
+//     return ++pokemon.level;
+// }
+
+
+// let pokemon = {
+//     name: "Kyrum",
+//     level: 70,
+//     type: "ice",
+//     levelUp: function(){
+//         return ++pokemon.level;
+//     }
+// }
+
+
+function Pokemon(name,level,type){
+    this.name = name;
+    this.level = level;
+    this.type = type;
+    this.levelUp = function(){
+        return ++this.level;
+    };
+}
+
+let pokemon01 = new Pokemon("Reshiram", 50, "fire");
+
+console.log(pokemon01.level)
+pokemon01.levelUp()
+console.log(pokemon01.level)
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

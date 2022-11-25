@@ -10,10 +10,15 @@
     body {
         background-color: rgb(103, 91, 91);
     }
+    button{
+        
+        
+        font-size: large;
+    }
 </style>
 <body>
     <div id="app"></div>
-
+<div onmouseover=""></div>
 
 
     <script>
@@ -30,7 +35,9 @@
                 <button onclick="hey(tall1)">tell variabel</button>
                 <button onclick="hey(tall2[0])">tell array0</button>
                 <button onclick="hey(tall2[1])">tell array1</button>
-                <button onclick="dumbAdition()">${tall3}</button>
+                <button onmouseover="dumbAdition()"onclick="dumbAdition()">${tall3}</button>
+                <button onclick="show()">oppdater show</button>
+                <button onmouseover=""onclick="">try for text</button>
                 `;
             }
         //controller
@@ -45,6 +52,9 @@ function hey(kult){
 function dumbAdition(){
     tall3 -=-1
     show()
+}
+function  toolTipTekst(){
+
 }
 
 
