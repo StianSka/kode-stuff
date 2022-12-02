@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+   
+
+
+    <script>
+        //model
+        let log = console.log;
+        let textToConvert = "";
+        let converted = "";
+        const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',' ','.',',','?']
+        const morseAlphabet = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..',
+            '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..',
+            '.----', '..---', '...--', '....-', '.....', '-....', '--...', '---..', '----.', '-----','|','|','|','?']
+
+        //view
+        show()
+        function show() {
+            let HTML = "";
+            HTML +=//html
+                `
+        <input type="text" onchange="saveTekst(this)"> 
+        <button onclick="translateToMorse()">translate</button> 
+        <br>
+        <div>your text in morse is:${converted}</div>
+
+        `;
+            document.getElementById('app').innerHTML = HTML
+        }
+        //controller
+        function saveTekst(thisOne) {
+            textToConvert = thisOne.value;
+        }
+        function translateToMorse() {
+            converted = "";
+            let temp = "";
+            let tempIndex = 0;
+            for (let j = 0; j < textToConvert.length; j++) {
+                for (let i = 0; i < alphabet.length; i++) {
+                    temp = textToConvert.charAt(tempIndex)
+                    if (temp == alphabet[i]) {
+                        converted += morseAlphabet[i] + ' ';
+                    }
+                } tempIndex++;
+            }
+            show()
+        }
+
+    </script>
+</body>
+
+</html>

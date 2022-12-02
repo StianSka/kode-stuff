@@ -19,16 +19,30 @@
 
     <script>
 //model
-
+const hei = console.log;
+const arrayTing = [];
  //view
     function show(){
         document.getElementById('app').innerHTML = //html
         `
-                
+        <button onclick="doStuff(this)">supp</button>
+        <button onclick="doStuff2(this)">array</button>    
         `;
     }
+    show()
 //controller
-
+function doStuff(thisOne) {
+    thisOne.innerHTML = pokemon;
+    hei(pokemon);
+}
+function doStuff2(thisOne) {
+    
+    arrayTing[0] = 'waht is up'
+    arrayTing[1] = 111
+    arrayTing[2] = 'hei hva skjer da'
+    hei(arrayTing);
+    thisOne.innerHTML = arrayTing;
+}
     </script>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(56, 56, 56);
+        }
+        div{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+   
+
+    <script>
+//model
+    let chosenTool = '';
+    let divTekst = 'klikk en av kanppene ovenfor deretter klikk spill'; 
+    let compChoise = '...';
+    let score = 0;
+    let result = '';
+    let knappTekst = 'spill';
+
+ //view
+    function show(){
+        let HTML = '';
+        HTML += //html
+        `
+        <button onclick="choseThis('stein')">stein</button>
+        <button onclick="choseThis('saks')">saks</button>
+        <button onclick="choseThis('papir')">papir</button>
+        <div>${divTekst}&nbsp;${chosenTool}</div>
+        <button onclick="determendCompChoise()">${knappTekst}</button>
+        <div>computers valg er&nbsp;${compChoise}</div>
+        <div>${result}&nbsp;${score}</div>
+        `;
+        document.getElementById('app').innerHTML = HTML
+    }
+    show()
+//controller
+
+function choseThis(tool){      
+    chosenTool = tool;
+    divTekst = 'du har valgt';
+    show()
+}
+function determendCompChoise(){
+    let choiseInNum = Math.ceil(Math.random()*3)
+    if(choiseInNum == 1){
+        compChoise = 'stein';
+    }else if(choiseInNum == 2){
+        compChoise = 'saks';
+    }else {
+        compChoise = 'papir';
+    }
+    knappTekst = 'spill igjen?'
+    didWin(chosenTool)
+}
+function didWin(yourChoise){
+    if(yourChoise == compChoise){
+        result = 'uavgjort din score er nå'
+    }else if(yourChoise == 'stein' && compChoise == 'saks'||
+             yourChoise == 'saks' && compChoise == 'papir'||
+             yourChoise == 'papir' && compChoise == 'stein'){
+        result = 'du har vunnet din score er nå'
+        score ++
+    }else{
+        result = 'du har tapt din score er nå'
+        score--
+    }
+    show()
+}
+
+
+    </script>
+</body>
+</html>

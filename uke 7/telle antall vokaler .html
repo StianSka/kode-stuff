@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+        let lOg = console.log
+
+        //view
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+            <button onclick="checkVokaler()">tell vokaler</button>
+            <button onclick="removeVocals()">ta vekk vokaler</button>  
+            `;
+        }
+        show()
+
+        //controller
+
+        function checkVokaler() {
+            let tekst = 'åssen går det, bare bra';
+            let antalVokaler = 0;
+            let temp;
+            let temp2;
+            let vokaler = ['a', 'e', 'i', 'o', 'u', 'y', 'ø', 'æ', 'å'];
+
+            for (let i1 = 0; i1 < vokaler.length; i1++) {
+                for (let i2 = 0; i2 < tekst.length; i2++) {
+                    temp = tekst.charAt(i2)
+                    if (temp == vokaler[i1]) {
+                        antalVokaler++
+                    }
+                }
+            }
+            console.log(antalVokaler)
+        }
+
+        function removeVocals() {
+            let text = "åssen går det, bare bra"
+            let temp = '';
+            let textToPrint = '';
+            let vokaler = ['a', 'e', 'i', 'o', 'u', 'y', 'ø', 'æ', 'å'];
+            for (let i = 0; i < text.length; i++) {
+                temp = text.charAt(i)
+                if (temp != vokaler[0] &&
+                    temp != vokaler[1] &&
+                    temp != vokaler[2] &&
+                    temp != vokaler[3] &&
+                    temp != vokaler[4] &&
+                    temp != vokaler[5] &&
+                    temp != vokaler[6] &&
+                    temp != vokaler[7] &&
+                    temp != vokaler[8]) {
+                    textToPrint += temp
+                }
+            } console.log(textToPrint)
+        }
+    </script>
+</body>
+
+</html>
