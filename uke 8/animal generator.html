@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        // høyde * lengd *brede - 15% = vekt?
+        //model
+        let log = console.log;
+        let id = 0;
+        const dyrehage = [];
+
+        //view
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <div></div>
+                <button onclick="makeAnimal()">make animal</button>       
+                `;
+        }
+        //controller
+        function makeAnimal() {
+            let species = determineSpecies();
+            let hieght = determineSize(species, 'hieght');
+            let width = determineSize(species, 'width');
+            let lenght = determineSize(species, 'lenght');
+
+            dyrehage[id] = new Dyr(id, species, hieght, width, lenght);
+            log(dyrehage[id])
+            id++
+
+            show()
+
+        }
+        function determineSize(animal, atribut) {
+            let result = 0;
+            let rangeMin = 0;
+            let rangeMax = 0;
+            if (atribut == 'hieght' && animal == 'bear') {
+                rangeMin = 85
+                rangeMax = 110
+            } else if (atribut == 'hieght' && animal == 'moose') {
+                rangeMin = 200
+                rangeMax = 230
+            } else if (atribut == 'hieght' && animal == 'wolf') {
+                rangeMin = 65
+                rangeMax = 95
+            } else if (atribut == 'width' && animal == 'bear') {
+                rangeMin = 90
+                rangeMax = 110
+            } else if (atribut == 'width' && animal == 'moose') {
+                rangeMin = 90
+                rangeMax = 110
+            } else if (atribut == 'width' && animal == 'wolf') {
+                rangeMin = 35
+                rangeMax = 50
+            } else if (atribut == 'lenght' && animal == 'bear') {
+                rangeMin = 220
+                rangeMax = 250
+            } else if (atribut == 'lenght' && animal == 'moose') {
+                rangeMin = 200
+                rangeMax = 240
+            } else if (atribut == 'lenght' && animal == 'wolf') {
+                rangeMin = 150
+                rangeMax = 180
+            }
+            result = Math.round(Math.random() * (rangeMax - rangeMin) + rangeMin);
+            return result;
+
+        }
+        function determineSpecies() {
+            let result;
+            let temp = Math.ceil(Math.random() * 3)
+            if (temp == 1) {
+                result = 'bear';
+                return result;
+            } else if (temp == 2) {
+                result = 'moose';
+                return result;
+            } else {
+                result = 'wolf';
+                return result;
+            }
+        }
+
+        function Dyr(id, name, hieght, width, lenght) {
+            this.id = id;
+            this.name = name;
+            this.hieght = hieght;
+            this.width = width;
+            this.lenght = lenght;
+            this.weight = Math.floor(((this.hieght * this.lenght * this.width)) / 100 * 90);
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+        let result = 0;
+        //view
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="mathRandom(30,35)">nummber plz</button> 
+                <div>${result}</div>    
+                `;
+        }
+        //controller 
+
+        function mathRandom(min1, max1) {
+            result = Math.round(Math.random() * (max1 - min1) + min1);
+        }
+
+
+    </script>
+</body>
+
+</html>

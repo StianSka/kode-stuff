@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <div></div>
+    <script>
+        //model
+        let log = console.log;
+        let yourScore = 0;
+        let compScore = '';
+        let gameText = 'your score is';
+        let gameOverText = '';
+        const cards = [];
+        //view
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="startGame()">play</button>
+                <div>intro tekst</div>      
+                `;
+        }
+        function gameShow() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="getCard()">card plz</button>
+                <button onclick="getCompCards()">i'm good</button>
+                <div>${gameText} ${yourScore}</div>
+                <div>${gameOverText} ${compScore}</div>        
+                `;
+        }
+
+        //controller
+
+        function startGame() {
+            cards[0] = doMath(1, 13);
+            cards[1] = doMath(1, 13);
+            calculateScore()
+        }
+
+        function getCard() {
+            cards[cards.length] = doMath(1, 13);
+            calculateScore()
+        }
+
+        function getCompCards() {
+            let compCards = [];
+            let index = 0;
+            compScore = 0;
+            while (compScore < yourScore) {
+                compCards[index] = doMath(1, 13);
+                if (compCards[index] <= 10) {
+                    compScore += compCards[index];
+                } else if (compCards[index] > 10 && compCards[index] < 14) {
+                    compScore += 10;
+                }
+                index ++;
+            }
+            determineWinner()
+        }
+
+        function determineWinner(){
+            if (compScore<22){
+                gameOverText = 'you lose, the dealer got'
+            } else {
+                gameOverText ='you win, the dealer busts'
+            }
+            gameShow()
+        }
+
+        function calculateScore() {
+            let scoreOfCards = [];
+            let score = 0;
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i] <= 10) {
+                    scoreOfCards[i] = cards[i];
+                    score += scoreOfCards[i];
+                } else if (cards[i] > 10 && cards[i] < 14) {
+                    scoreOfCards[i] = 10;
+                    score += scoreOfCards[i];
+                }
+            }
+            checkScore(score)
+            gameShow();
+        }
+
+        function checkScore(score) {
+            if (score <= 21) {
+                yourScore = score
+                gameText = 'your score is';
+            } else {
+                yourScore = '';
+                gameText = 'you lose, better luck next time'
+            }
+
+        }
+
+        function doMath(min, max) {
+            let result = Math.round(Math.random() * (max - min) + min);
+            return result
+        }
+
+    </script>
+</body>
+
+</html>
