@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+        let log = console.log;
+        const cards = [];
+        let gameText = '';
+        let yourScore = 0;
+        let showHand = '';
+        const playerCards = [];
+        let playerIndex = 0;
+        const compCards = [];
+        
+
+        //view
+        begin()
+        function begin() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="start()">play</button>      
+                `;
+        }
+
+        function gameScreen() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="getCard()">card plz</button>
+                <button onclick="">i'm good</button>
+                <div>${showHand}<br>
+                    ${gameText}${yourScore}
+                </div>      
+                `;
+        }
+        //controller
+        makeDeck()
+
+        function start() {
+            getCard()
+            getCard()
+            gameScreen()
+        }
+
+        function getCard() {
+            let temp = doMath(0, cards.length - 1)
+            playerCards[playerIndex] = cards[temp];
+            cards.splice(temp, 1)
+            showHand += playerCards[playerIndex].cardId + ' '
+            uppdateScore(playerIndex)
+            gameScreen()
+            playerIndex++
+        }
+        function uppdateScore(cardIndex) {
+            yourScore += playerCards[cardIndex].score 
+        }
+
+        function doMath(min, max) {
+            let result = Math.round(Math.random() * (max - min) + min);
+            return result
+        }
+
+        function makeDeck() {
+            makeCards(0, 'spades')
+            makeCards(13, 'clubs')
+            makeCards(26, 'hearts')
+            makeCards(39, 'diamonds')
+            addScore()
+        }
+
+        function makeCards(id, collor) {
+            let cardId = id;
+            let type = collor;
+            let number = 1;
+            for (let i = 0; i < 13; i++) {
+                cards[cardId] = new Card(type, number)
+                cardId++;
+                number++;
+            }
+        }
+
+        function addScore() {
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i].number == 1) {
+                    cards[i].score = 11;
+                    cards[i].cardId = 'ace of ' + cards[i].type
+                } else if (cards[i].number == 11) {
+                    cards[i].score = 10;
+                    cards[i].cardId = 'knight of ' + cards[i].type
+                } else if (cards[i].number == 12) {
+                    cards[i].score = 10;
+                    cards[i].cardId = 'queen of ' + cards[i].type
+                } else if (cards[i].number == 13) {
+                    cards[i].score = 10;
+                    cards[i].cardId = 'king of ' + cards[i].type
+                } else {
+                    cards[i].score = cards[i].number;
+                }
+                log(cards[i])
+            }
+        }
+
+        function Card(type, number) {
+            this.cardId = type + ' ' + number;
+            this.type = type;
+            this.number = number;
+
+        }
+    </script>
+</body>
+
+</html>

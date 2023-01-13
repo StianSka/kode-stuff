@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="model.js"></script>
+    <script src="votePageView.js"></script>
+    <script src="votePageController.js"> </script>
+    <script src="optionPageView.js"> </script>
+    <script src="optionPageController.js"> </script>
+
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+
+    <script>
+
+        uppdateView()
+        function uppdateView() {
+            if (model.app.currentPage === 'vote') uppdateViewVotePage();
+            if (model.app.currentPage === 'options') uppdateViewOptionPage();
+        }
+    </script>
+</body>
+
+</html>

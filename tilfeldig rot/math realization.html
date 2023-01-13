@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+
+        div {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+
+        let result9 = 0;
+        let result10 = 0;
+        let intputTesxt;
+        //view
+
+        show()
+        function show() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="times9(1)">1</button>
+                <button onclick="times9(2)">2</button> 
+                <button onclick="times9(3)">3</button> 
+                <button onclick="times9(4)">4</button>    
+                <button onclick="times9(5)">5</button> 
+                <button onclick="times9(6)">6</button> 
+                <button onclick="times9(7)">7</button> 
+                <button onclick="times9(8)">8</button> 
+                <button onclick="times9(9)">9</button>
+                <br>
+                <input type="number" onchange="intputTesxt = this.value">
+                <button onclick="times9(intputTesxt)">chosen number</button>
+                
+                <div>detter er resutatet av 9 ganger x ${result9}</div>
+                <div>detter er resutatet av (10 ganger x) - x  ${result10}</div> 
+                `;
+        }
+        //controller
+
+        function times9(num) {
+            result9 = 9 * num
+            times10(num)
+            show()
+        }
+
+        function times10(num) {
+            result10 = (10 * num) - num
+        }
+
+    </script>
+</body>
+
+</html>

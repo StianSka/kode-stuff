@@ -28,8 +28,10 @@
         let yourScore = 0;
         let showHand = '';
         const playerCards = [];
-        let playerCardsIndex = 0;
+        let playerAces = 0;
+        let playerIndex = 0;
         const compCards = [];
+
 
         //view
         begin()
@@ -50,6 +52,14 @@
                 </div>      
                 `;
         }
+
+        function youLoseScreen() {
+            document.getElementById('app').innerHTML = //html
+                `
+                <button onclick="window.location.reload()">play again?</button>  
+                <div>${gameText}</div>      
+                `;
+        }
         //controller
         makeDeck()
 
@@ -60,25 +70,44 @@
         }
 
         function getCard() {
-            let temp = doMath(0, cards.length)
-            playerCards[playerCardsIndex] = cards[temp]
-            uppdateHand(temp)
+            let temp = doMath(0, cards.length - 1)
+            playerCards[playerIndex] = cards[temp];
+            cards.splice(temp, 1)
+            showHand += playerCards[playerIndex].cardId + ' '
+            uppdateScore(playerIndex)
             gameScreen()
-            playerCardsIndex++
+            playerIndex++
+            haveBust()
         }
 
-        function uppdateScore() {
-            for (let i = 0; i < 12; i++){
-                if(playerCards[playerCardsIndex].score == i){
-                    yourScore += i;
+        function uppdateScore(cardIndex) {
+            yourScore = 0
+            for (let i = 0; i < playerCards.length; i++) {
+                yourScore += playerCards[i].score
+            }
+            if (yourScore == 21) {
+
+            }
+            if (yourScore > 21) {
+                clacForAce()
+            }
+
+        }
+
+        function clacForAce() {
+            for (let i2 = 0; i2 < playerCards.length; i2++) {
+                if (playerCards[i2].score == 11) {
+                    playerCards[i2].score = 1;
+                    uppdateScore()
                 }
             }
         }
-
-        function uppdateHand(cardsIndex) { //unfinished
-            showHand += cards[cardsIndex].cardId + ', '
-            uppdateScore()
-            gameText
+        
+        function haveBust() {
+            if (yourScore > 21) {
+                gameText = 'better luck next time, you bust'
+                youLoseScreen()
+            }
         }
 
         function doMath(min, max) {
@@ -121,6 +150,7 @@
                     cards[i].cardId = 'king of ' + cards[i].type
                 } else {
                     cards[i].score = cards[i].number;
+                    cards[i].cardId = cards[i].number + ' of ' + cards[i].type
                 }
                 log(cards[i])
             }
@@ -130,7 +160,6 @@
             this.cardId = type + ' ' + number;
             this.type = type;
             this.number = number;
-
         }
     </script>
 </body>
