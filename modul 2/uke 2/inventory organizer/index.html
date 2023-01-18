@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="model.js"></script>
+    <script src="common.js"></script>
     <script src="invView.js"></script>
     <script src="invController.js"></script>
     <script src="lootView.js"></script>
@@ -15,29 +16,35 @@
     <script src="stageController.js"></script>
     <script src="inspectView.js"> </script>
     <script src="inspectController.js"> </script>
-    <style>
-        body {
-            background-color: rgb(56, 56, 56);
-        }
-
-        div {
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="style inventory.css">
 </head>
 
 <body>
     <div id="app"></div>
+    
 
+    
     <script>
 
         uppdateView()
         function uppdateView() {
-            document.getElementById('app').innerHTML = //html
-                `
-                
-        `;
+            let page = model.app.page;
+            if (page == 'stage') {
+                uppdateStageView();
+            };
+            if (page == 'loot') {
+                uppdateLootView();
+            };
+            if (page == 'inv') {
+                uppdateInvView();
+            };
+            if (page == 'inspect') {
+                uppdateInspectView();
+            };
         }
+
+       // kode spørsmål hvis man har en construktor for objekter hovr skal den ligge 
+
     </script>
 </body>
 

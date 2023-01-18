@@ -11,23 +11,24 @@ For hver side:
 
 const model = {
 
-    // tilstand app
-    app: {
-        page: 'stage',
-    },
+  // tilstand app
+  app: {
+    page: 'stage',
+  },
 
-    // input felter til hver side
-    inputs: {
+  // input felter til hver side
+  inputs: {
 
-    },
+  },
 
-    // data
-    loot:[
-        
-    ],
+  // data
+  data: {
+
+    lootRoll: [],
     inv: [
-        { id: 1, name: "placeholder", type: "placeholder" },
+      { id: 0, name: "placeholder", type: "placeholder" },
     ],
+  }
 
 
 
