@@ -3,7 +3,8 @@ function createLoot() {
     let newMaterial = model.data.lootMaterial[mathRandom(0, 2)];
     let newId = model.data.lastGivenLootId + 1;
     model.data.lastGivenLootId = newId;
-    model.data.lootRoll.push(new Loot(newId, newName, newMaterial));
+    let lootRoll1 = new Loot(newId, newName, newMaterial)
+    model.data.lootRoll.push(lootRoll1);
 }
 
 

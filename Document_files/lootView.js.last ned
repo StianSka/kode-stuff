@@ -13,7 +13,7 @@ function uppdateLootView() {
 function findLoot() {
     let lootTabel = model.data.lootRoll
     for (let i = 0; i < lootTabel.length; i++){
-        console.log(model.data.lootRoll[i].name)
+        console.log(lootTabel.name)
     }
 }
 

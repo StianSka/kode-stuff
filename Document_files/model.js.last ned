@@ -23,6 +23,7 @@ const model = {
 
   // data
   data: {
+
     lootRoll: [],
     lootName: ['axe', 'sword', 'staff'],
     lootMaterial: ['metal', 'wood', 'stone'],
