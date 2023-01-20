@@ -1,9 +1,14 @@
 function createLoot() {
-    let newName = model.data.lootName[mathRandom(0, 2)];
-    let newMaterial = model.data.lootMaterial[mathRandom(0, 2)];
     let newId = model.data.lastGivenLootId + 1;
-    model.data.lastGivenLootId = newId;
-    model.data.lootRoll.push(new Loot(newId, newName, newMaterial));
+    let newLootName = model.data.lootName
+    let newLootMaterial = model.data.lootMaterial
+    for (let i = 0; i < model.data.amountOfRools; i++) {
+        let newName = newLootName[mathRandom(0, (newLootName.length-1))];
+        let newMaterial = newLootMaterial[mathRandom(0, (newLootMaterial.length-1))];
+        model.data.lastGivenLootId = newId;
+        model.data.lootRoll.push(new Loot(newId, newName, newMaterial));
+        newId++
+    }
 }
 
 
