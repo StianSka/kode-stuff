@@ -23,15 +23,13 @@ const model = {
 
   // data
   data: {
-    amountOfRools: 20,
+    amountOfRools: 5,
     lootRoll: [],
     lootName: ['axe', 'sword', 'staff'],
     lootMaterial: ['metal', 'wood', 'stone'],
     lastGivenLootId: 0,
 
-    inv: [
-      { id: 0, name: "placeholder", type: "placeholder" },
-    ],
+    inv: [],
   }
 
 

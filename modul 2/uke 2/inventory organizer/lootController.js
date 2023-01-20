@@ -11,6 +11,12 @@ function createLoot() {
     }
 }
 
+function claimLoot(index){
+    model.data.inv.push(model.data.lootRoll[index])
+    model.data.lootRoll.length = 0
+    switchPage('stage')
+}
+
 
 function Loot(id, name, material) {
     this.id = id;

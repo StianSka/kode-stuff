@@ -3,7 +3,7 @@ function uppdateLootView() {
     document.getElementById('app').innerHTML = //html
         `
             <h1>loot</h1>
-            <div>${displayLootTable()}</div>
+            <div class="lootBox">${displayLootTable()}</div>
         `;
 }
 
@@ -13,14 +13,12 @@ function displayLootTable() {
     for (let i = 0; i < lootTabel.length; i++) {
         htmlLoot += //html
             `
-                <div>
-                    ${lootTabel[i].name}
-                    ${lootTabel[i].material}
-                    <button onclick="">claim</button>
+                <div class="lootPack">
+                    ${lootTabel[i].name}<br>
+                    ${lootTabel[i].material}<br>
+                    <button onclick="claimLoot(${i})">claim</button>
                 </div>
             `;
     }
-
     return htmlLoot
-
 }

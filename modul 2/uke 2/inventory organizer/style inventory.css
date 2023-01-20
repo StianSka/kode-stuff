@@ -1,18 +1,30 @@
 
 .inventory{
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(4,80px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3,1fr);
     padding: 20px;
     column-gap: 8px; 
     row-gap: 8px;
-    justify-content: center;
-    align-self: center;
+    
+    
 }
 .invSlot{ 
+    display: grid;
     border-style: solid; 
     border-color: rgb(255, 255, 255);
+    place-items: center;
+    height: 100px;
+    width: 100px;
     padding: 5px;
+}
+.lootBox{
+    display: grid;
+    grid-template-columns:repeat(5,1fr); 
+}
+.lootPack{
+   display: grid;
+   place-items: center;
 }
 body {
     background-color: rgb(56, 56, 56);
