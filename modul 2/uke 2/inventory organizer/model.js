@@ -14,6 +14,8 @@ const model = {
   // tilstand app
   app: {
     page: 'stage',
+    currentGold: 0,
+    currenHP: 100,
   },
 
   // input felter til hver side
@@ -25,8 +27,10 @@ const model = {
   data: {
     amountOfRools: 5,
     lootRoll: [],
-    lootName: ['axe', 'sword', 'staff'],
-    lootMaterial: ['metal', 'wood', 'stone'],
+    lootType: ['consumable', 'artifact'],
+    lootNameConsumable: ['health potion', 'bag of coins'],
+    lootNameArtifact: ['ring', 'amulet', 'coin', 'crown'],
+    lootMaterial: ['iron', 'silver', 'gold'],
     lastGivenLootId: 0,
 
     inv: [],

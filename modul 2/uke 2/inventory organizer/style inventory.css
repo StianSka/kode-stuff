@@ -20,11 +20,17 @@
 }
 .lootBox{
     display: grid;
-    grid-template-columns:repeat(5,1fr); 
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows: repeat(1,1fr); 
 }
 .lootPack{
    display: grid;
    place-items: center;
+}
+.leaveButton{
+    display: grid;
+    place-items: center;
+    padding: 50px;
 }
 body {
     background-color: rgb(56, 56, 56);

@@ -15,8 +15,9 @@ function displayInv() {
             <div class="invSlot">
             ${inv[i].name}<br>
             ${inv[i].material}<br>
-            <button onclick="">toss</button>
+            <button onclick="">use</button>
             <button onclick="">inspect</button>
+            <button onclick="tossItem(${i})">toss</button>
             </div>
             `;
     }
