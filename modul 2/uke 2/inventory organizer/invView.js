@@ -2,6 +2,7 @@ function uppdateInvView() {
     document.getElementById('app').innerHTML = //html
         `
     <h1>inventory</h1>
+    <br><h1>${model.app.currentGold}</h1>
     <button onclick="switchPage('stage')">go back to stages</button>
     <div class="inventory">${displayInv()}</div>
     `;
@@ -14,8 +15,8 @@ function displayInv() {
             `
             <div class="invSlot">
             ${inv[i].name}<br>
-            ${inv[i].material}<br>
-            <button onclick="">use</button>
+            ${inv[i].material || ''}<br>
+            <button onclick="sellItem(${i})">sell</button>
             <button onclick="">inspect</button>
             <button onclick="tossItem(${i})">toss</button>
             </div>
