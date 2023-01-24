@@ -15,7 +15,7 @@ const model = {
   app: {
     page: 'stage',
     currentGold: 0,
-    currenHP: 100,
+    currentHP: 100,
   },
 
   // input felter til hver side

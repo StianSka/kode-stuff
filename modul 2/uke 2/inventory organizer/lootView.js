@@ -1,8 +1,10 @@
 function uppdateLootView() {
     document.getElementById('app').innerHTML = //html
         `
-            <h1>loot</h1>
-            <br><h1>${model.app.currentGold}</h1>
+        <h1>Loot<br>
+            HP:${model.app.currentHP}<br>
+            Gold:${model.app.currentGold}
+        </h1>
             <div class="lootBox">${displayLootTable()}</div>
             <div class="leaveButton" >
             <button onclick="emptyLootRoll(),switchPage('stage')">leave</button>

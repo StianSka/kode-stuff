@@ -1,6 +1,16 @@
 function goToStageLoot(stage) {
+    takeAwayHP(stage)
     createLoot(stage)
     switchPage('loot')
+}
+
+function takeAwayHP(stage){
+    model.app.currentHP = model.app.currentHP - (stage*4)
+
+    if(model.app.currentHP<=0){
+        alert("You lose!")
+        youLose()
+    }  
 }
 
 function createLoot(stage) {
