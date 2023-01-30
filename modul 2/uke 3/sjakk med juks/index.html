@@ -10,6 +10,18 @@
     <script src="controller.js"></script>
 </head>
 <body>
-    
+    <div id="app"></div>
+
+    <script>
+        view()
+        function view(){
+            let html
+            if(model.curentPage == 'main'){
+               html = updateView()
+            }
+            document.getElementById('app').innerHTML = html
+        }
+    </script>
+
 </body>
 </html>
