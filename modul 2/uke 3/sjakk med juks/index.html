@@ -5,24 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="view.js"></script>
     <script src="model.js"></script>
-    <script src="view.js"></script>
     <script src="controller.js"></script>
     <script src="pieceController.js"></script>
+    <script src="makeBoard.js"></script>
 </head>
 <body>
     <div id="app"></div>
-
-    <script>
-        show()
-        function show(){
-            let html
-            if(model.curentPage == 'main'){
-               html = updateView()
-            }
-            document.getElementById('app').innerHTML = html
-        }
-    </script>
 
 </body>
 </html>

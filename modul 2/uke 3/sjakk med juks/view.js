@@ -1,8 +1,15 @@
-function updateView(){
-    let html =//html
+updateView()
+function updateView() {
+    let html = ``;
+    if (model.curentPage == 'game') {html = uppdateViewBoard() }
+    document.getElementById('app').innerHTML = html
+}
+
+function uppdateViewBoard(){
+    let html = ``;
+    html = //html
     `
-    <h1> halo</h1>
-    <div>hei jeg heter stian</div>
+    <div>haya papaya</div>
     `;
     return html
 }

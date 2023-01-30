@@ -1,13 +1,10 @@
 const model = {
     //app
-    curentPage: 'main',
+    curentPage: 'game',
     //inputs
 
     //data
-    board:{
-        
-    },
-
+   board:[],
     blackPpawns:[],
     blackKing:
     {
