@@ -1,11 +1,26 @@
 function uppdateInspectView() {
-    document.getElementById('app').innerHTML = //html
-    `
-    <h1>inspect</h1>
-    <br><h1>${model.app.currentGold}</h1>
-    <button onclick="switchPage('stage')">stage</button>
-    <button onclick="switchPage('loot')">loot</button>
-    <button onclick="switchPage('inv')">inventory</button>
-    <button onclick="switchPage('inspect')">inspect</button>
+    let html = //html
+        `
+    <h1>inspect<br>
+    HP:${model.app.currentHP}<br>
+    Gold:${model.app.currentGold}
+    </h1>
+    
+    <button onclick="switchPage('inv')">go back</button>
+    <div>${inspectSelectedItem()}</div>
     `;
+    return html
 }
+
+function inspectSelectedItem() {
+    let html = //html
+        `
+    <h1>
+    name:${model.app.currentlyInspecting.name}<br>
+    value:${model.app.currentlyInspecting.value}<br>
+    material:${model.app.currentlyInspecting.material || ''}
+    </h1>
+    `;
+    return html
+}
+

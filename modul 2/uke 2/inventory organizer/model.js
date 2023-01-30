@@ -16,6 +16,13 @@ const model = {
     page: 'stage',
     currentGold: 0,
     currentHP: 100,
+    currentlyInspecting: 
+    {
+      id: '',
+      material: '',
+      name: '',
+      value: '',
+    },
   },
 
   // input felter til hver side

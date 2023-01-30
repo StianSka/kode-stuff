@@ -1,5 +1,5 @@
 function uppdateInvView() {
-    document.getElementById('app').innerHTML = //html
+    let html = //html
         `
         <h1>Inventory<br>
             HP:${model.app.currentHP}<br>
@@ -8,6 +8,7 @@ function uppdateInvView() {
     <button onclick="switchPage('stage')">go back to stages</button>
     <div class="inventory">${displayInv()}</div>
     `;
+    return html
 }
 function displayInv() {
     let inv = model.data.inv
@@ -19,7 +20,7 @@ function displayInv() {
             ${inv[i].name}<br>
             ${inv[i].material || ''}<br>
             <button onclick="sellItem(${i})">${sellOrUse(i)}</button>
-            <button onclick="">inspect</button>
+            <button onclick="inspectItem(${i})">inspect</button>
             <button onclick="tossItem(${i})">toss</button>
             </div>
             `;

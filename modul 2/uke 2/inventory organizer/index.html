@@ -21,25 +21,27 @@
 
 <body>
     <div id="app"></div>
-        
-    
+
+
     <script>
 
         uppdateView()
         function uppdateView() {
+            let html
             let page = model.app.page;
             if (page == 'stage') {
-                uppdateStageView();
+                html = uppdateStageView();
             };
             if (page == 'loot') {
-                uppdateLootView();
+                html = uppdateLootView();
             };
             if (page == 'inv') {
-                uppdateInvView();
+                html = uppdateInvView();
             };
             if (page == 'inspect') {
-                uppdateInspectView();
+                html = uppdateInspectView();
             };
+            document.getElementById('app').innerHTML = html
         }
 
        // kode spørsmål hvis man har en construktor for objekter hovr skal den ligge 

@@ -1,5 +1,5 @@
 function uppdateStageView() {
-    document.getElementById('app').innerHTML = //html
+    let html = //html
     `
     <h1>Stage<br>
         HP:${model.app.currentHP}<br>
@@ -11,4 +11,5 @@ function uppdateStageView() {
     <button onclick="goToStageLoot(4)">stage4</button>
     <button onclick="switchPage('inv')">go to inventory</button>
     `;
+    return html
 }

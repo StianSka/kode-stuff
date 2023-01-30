@@ -1,5 +1,5 @@
 function uppdateLootView() {
-    document.getElementById('app').innerHTML = //html
+    let html = //html
         `
         <h1>Loot<br>
             HP:${model.app.currentHP}<br>
@@ -11,6 +11,7 @@ function uppdateLootView() {
             </div>
             
         `;
+        return html
 }
 
 function displayLootTable() {
