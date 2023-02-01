@@ -1,0 +1,29 @@
+.boardContainer{
+    display: flex;
+    justify-content: center;
+}
+.squareContainer {
+    display: grid;
+    width: 520px;
+    grid-template-columns: repeat(8, 65px);
+    grid-template-rows: repeat(8, 65px);
+    border-color: black;
+    border-style: solid;
+}
+
+.chessSquare{
+    display: grid;
+    align-items: end;
+}
+
+.customeizeBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+    padding: 8px;
+    margin-bottom: 15px;
+    
+
+}
