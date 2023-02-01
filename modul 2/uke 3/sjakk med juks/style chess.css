@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
 }
-.squareContainer {
+.board {
     display: grid;
     width: 520px;
     grid-template-columns: repeat(8, 65px);

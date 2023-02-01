@@ -22,7 +22,6 @@ function colorBoard(){
     collorWhiteSquares(24)
     collorWhiteSquares(40)
     collorWhiteSquares(56)
-
 }
 
 function collorBlackSquares(index) {

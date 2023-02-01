@@ -11,7 +11,7 @@ function uppdateViewBoard() {
         `
         <div class="customeizeBar">${customeColorBar()}</div>
         <div class="boardContainer">
-            <div class="squareContainer">${drawBoard()}</div>
+            <div class="board">${drawBoard()}</div>
         </div>
     `;
     return html
