@@ -21,10 +21,20 @@ function drawBoard() {
     let html = ``
     for (let i = 0; i < model.board.length; i++) {
         html += /*HTML*/`
-        <div class="chessSquare" style=" background-color: ${model.board[i].collor}">
-            ${showSquareId(i)}
+        <div id="${model.board[i].id}" onclick="movePiece(event,this)" class="chessSquare" style=" background-color: ${model.board[i].collor}">
+        ${showPieces(i)}${showSquareId(i)}
         </div>
     `;
+    }
+    return html
+}
+
+function showPieces(index) {
+    let html = ``
+    for (let i = 0; i < model.allInPlayPieces.length; i++) {
+        if(model.board[index].id ==  model.allInPlayPieces[i].possison ){
+            html = `<img class="piece" src="${model.allInPlayPieces[i].imageLink}" ></img>`
+        }
     }
     return html
 }
@@ -34,7 +44,7 @@ function showSquareId(index) {
     if (model.inputs.showSquareId == true) {
         html = model.board[index].id
         return html
-    } else { return ''}
+    } else { return '' }
 }
 
 function customeColorBar() {
