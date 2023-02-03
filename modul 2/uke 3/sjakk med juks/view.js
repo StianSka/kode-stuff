@@ -21,7 +21,7 @@ function drawBoard() {
     let html = ``
     for (let i = 0; i < model.board.length; i++) {
         html += /*HTML*/`
-        <div id="${model.board[i].id}" onclick="movePiece(event,this)" class="chessSquare" style=" background-color: ${model.board[i].collor}">
+        <div id="${model.board[i].id}" onclick="movePiece(event,this)" class="chessSquare" style=" background-color: ${model.board[i].color}">
         ${showPieces(i)}${showSquareId(i)}
         </div>
     `;

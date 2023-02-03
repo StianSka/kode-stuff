@@ -2,38 +2,38 @@
 function makeBoard() {
     const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
     let id = ''
-    let collor = ''
+    let color = ''
     let currentPiece = ''
     for (let j = 0; j < 8; j++) {
         for (let i = 0; i < 8; i++) {
             id = letters[j] + (i + 1)
-            model.board.push({ id: id, currentPiece: currentPiece, collor: collor })
+            model.board.push({ id: id, currentPiece: currentPiece, color: color })
         }
     }
     colorBoard()
 }
 
 function colorBoard(){
-    collorBlackSquares(0)
-    collorBlackSquares(16)
-    collorBlackSquares(32)
-    collorBlackSquares(48)
-    collorWhiteSquares(8)
-    collorWhiteSquares(24)
-    collorWhiteSquares(40)
-    collorWhiteSquares(56)
+    colorBlackSquares(0)
+    colorBlackSquares(16)
+    colorBlackSquares(32)
+    colorBlackSquares(48)
+    colorWhiteSquares(8)
+    colorWhiteSquares(24)
+    colorWhiteSquares(40)
+    colorWhiteSquares(56)
 }
 
-function collorBlackSquares(index) {
+function colorBlackSquares(index) {
     for (let i = index; i < (index + 8); i = i + 2) {
-        model.board[i].collor = model.selectedColorBlack
-        model.board[(i + 1)].collor = model.selectedColorWhite
+        model.board[i].color = model.selectedColorBlack
+        model.board[(i + 1)].color = model.selectedColorWhite
     }
 }
 
-function collorWhiteSquares(index) {
+function colorWhiteSquares(index) {
     for (let i = index; i < (index + 8); i = i + 2) {
-        model.board[i].collor = model.selectedColorWhite
-        model.board[(i + 1)].collor = model.selectedColorBlack
+        model.board[i].color = model.selectedColorWhite
+        model.board[(i + 1)].color = model.selectedColorBlack
     }
 }
