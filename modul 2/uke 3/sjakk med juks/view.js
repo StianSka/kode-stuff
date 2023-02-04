@@ -10,6 +10,7 @@ function uppdateViewBoard() {
     let html = //html
         `
         <div class="customeizeBar">${customeColorBar()}</div>
+        <div class="whosTurn">${model.colorToMove} to move</div>
         <div class="boardContainer">
             <div class="board">${drawBoard()}</div>
         </div>
@@ -21,7 +22,7 @@ function drawBoard() {
     let html = ``
     for (let i = 0; i < model.board.length; i++) {
         html += /*HTML*/`
-        <div id="${model.board[i].id}" onclick="movePiece(event,this)" class="chessSquare" style=" background-color: ${model.board[i].color}">
+        <div id="${model.board[i].id}" onclick="movePiece(this)" class="chessSquare" style=" background-color: ${model.board[i].color}">
         ${showPieces(i)}${showSquareId(i)}
         </div>
     `;
