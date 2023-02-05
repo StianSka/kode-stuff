@@ -1,4 +1,3 @@
-
 function makeBoard() {
     const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
     let id = ''
@@ -13,7 +12,7 @@ function makeBoard() {
     colorBoard()
 }
 
-function colorBoard(){
+function colorBoard() {
     colorBlackSquares(0)
     colorBlackSquares(16)
     colorBlackSquares(32)
@@ -35,5 +34,15 @@ function colorWhiteSquares(index) {
     for (let i = index; i < (index + 8); i = i + 2) {
         model.board[i].color = model.selectedColorWhite
         model.board[(i + 1)].color = model.selectedColorBlack
+    }
+}
+
+
+function uppdateBoardPossison(){
+    for (let i = 0; i < model.allInPlayPieces.length; i++) {
+        for (let j = 0; j < model.board.length; j++) {
+           if(model.allInPlayPieces[i].possison == model.board[j].id) {
+            model.board[j].currentPiece = model.allInPlayPieces[i].id}
+        }   
     }
 }

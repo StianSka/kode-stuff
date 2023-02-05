@@ -1,4 +1,5 @@
 makeBoard()
+uppdateBoardPossison()
 updateView()
 function updateView() {
     let html = ``;
