@@ -36,13 +36,13 @@ const model = {
             imageLink: 'img/black queen.png',
         },
         {
-            id: 'black bishop white c',
+            id: 'black bishop c',
             possison: 'c8',
             color:'black',
             imageLink: 'img/black bishop.png',
         },
         {
-            id: 'black bishop black f',
+            id: 'black bishop f',
             possison: 'f8',
             color:'black',
             imageLink: 'img/black bishop.png',
@@ -144,13 +144,13 @@ const model = {
             imageLink: 'img/white queen.png',
         },
         {
-            id: 'white bishop black c',
+            id: 'white bishop c',
             possison: 'c1',
             color:'white',
             imageLink: 'img/white bishop.png',
         },
         {
-            id: 'white bishop white f',
+            id: 'white bishop f',
             possison: 'f1',
             color:'white',
             imageLink: 'img/white bishop.png',

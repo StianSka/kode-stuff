@@ -1,7 +1,7 @@
 function pawnMove() {
     let pieceCollor = checkPieceColor()
     getLegalPawnMoves(pieceCollor)
-}
+} 
 
 function checkPieceColor() {
     return model.inputs.currentlyMovingPiece.color
@@ -70,7 +70,6 @@ function getlegaleBlackPawnMoves() {
     if (model.inputs.currentlyMovingPiece.hasMoved == false) {
         let legalFirstMove = (model.arrayLeters[letterIndex] + model.arrayNumbers[(numberIndex - 2)])
         for (let i = 0; i < model.board.length; i++) {
-            console.log(model.board[i].id)
             if (model.board[i].id == forwardMove && model.board[i].currentPiece == '') {
                 model.board[i].color = model.legalMoveSquareColor
             }
