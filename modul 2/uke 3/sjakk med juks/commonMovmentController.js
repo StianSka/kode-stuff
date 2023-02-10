@@ -53,7 +53,7 @@ function horizontalMoveLeft(currentPos, color) {
 function verticalMoveDown(numberIndex, currentPos, color) {
     let boardPosIndex = findCurrentPosisonIndex(currentPos)
     let hasHitPieceDown = false
-    let indexUp = 0
+    let indexDown = 0
     numberIndex++
     for (let i = boardPosIndex + 1; i < model.board.length; i++) {
         if (model.board[i].id.includes(numberIndex) == true && model.board[i].currentPiece == '' && hasHitPieceDown == false) {
@@ -61,12 +61,12 @@ function verticalMoveDown(numberIndex, currentPos, color) {
         }
         if (model.board[i].currentPiece != '' && model.board[i].id.includes(numberIndex) == true && hasHitPieceDown == false) {
             hasHitPieceDown = true;
-            indexUp = i;
+            indexDown = i;
         }
     }
-    if (indexUp != 0) {
-        if (model.board[indexUp].currentPiece.includes(color) == false && model.board[indexUp].id.includes(numberIndex) == true) {
-            model.board[indexUp].color = model.legalMoveSquareColor
+    if (indexDown != 0) {
+        if (model.board[indexDown].currentPiece.includes(color) == false && model.board[indexDown].id.includes(numberIndex) == true) {
+            model.board[indexDown].color = model.legalMoveSquareColor
         }
     }
 }
@@ -74,20 +74,27 @@ function verticalMoveDown(numberIndex, currentPos, color) {
 function verticalMoveUp(numberIndex, currentPos, color) {
     let boardPosIndex = findCurrentPosisonIndex(currentPos)
     let hasHitPieceUp = false
-    let indexDown = 0
+    let indexUp = 0
     numberIndex++
-    for (let i = boardPosIndex - 1; i > 0; i--) {
+    for (let i = boardPosIndex - 1; i >= 0; i--) {
         if (model.board[i].id.includes(numberIndex) == true && model.board[i].currentPiece == '' && hasHitPieceUp == false) {
             model.board[i].color = model.legalMoveSquareColor
         }
         if (model.board[i].currentPiece != '' && model.board[i].id.includes(numberIndex) == true && hasHitPieceUp == false) {
             hasHitPieceUp = true;
-            indexDown = i;
+            indexUp = i;
         }
     }
-    if (indexDown != 0) {
-        if (model.board[indexDown].currentPiece.includes(color) == false && model.board[indexDown].id.includes(numberIndex) == true) {
-            model.board[indexDown].color = model.legalMoveSquareColor
+    console.log(hasHitPieceUp)
+    console.log(indexUp)
+    if (indexUp != 0) {
+        if (model.board[indexUp].currentPiece.includes(color) == false && model.board[indexUp].id.includes(numberIndex) == true) {
+            model.board[indexUp].color = model.legalMoveSquareColor
+        }
+    }
+    if (indexUp == 0 && hasHitPieceUp == true){
+        if (model.board[indexUp].currentPiece.includes(color) == false && model.board[indexUp].id.includes(numberIndex) == true) {
+            model.board[indexUp].color = model.legalMoveSquareColor
         }
     }
 }
