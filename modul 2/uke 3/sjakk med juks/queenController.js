@@ -6,6 +6,7 @@ function queenMove() {
     horizontalMoveLeft(currentPos, color)
     verticalMoveDown(numberIndex, currentPos, color)
     verticalMoveUp(numberIndex, currentPos, color)
+    diagonalUpRight(currentPos, color,)
 }
 
 

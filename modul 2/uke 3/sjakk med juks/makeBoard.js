@@ -6,10 +6,11 @@ function makeBoard() {
     for (let j = 0; j < 8; j++) {
         for (let i = 0; i < 8; i++) {
             id = letters[j] + (i + 1)
-            model.board.push({ id: id, currentPiece: currentPiece, color: color })
+            model.board.push({ id: id, currentPiece: currentPiece, color: color, index: 0 })
         }
     }
     colorBoard()
+    addIndexToSquare()
 }
 
 function colorBoard() {
@@ -37,12 +38,18 @@ function colorWhiteSquares(index) {
     }
 }
 
+function addIndexToSquare(){
+    for (let i = 0; i < model.board.length; i++) {
+        model.board[i].index = i
+    }
+}
 
-function uppdateBoardPossison(){
+function uppdateBoardPossison() {
     for (let i = 0; i < model.allInPlayPieces.length; i++) {
         for (let j = 0; j < model.board.length; j++) {
-           if(model.allInPlayPieces[i].possison == model.board[j].id) {
-            model.board[j].currentPiece = model.allInPlayPieces[i].id}
-        }   
+            if (model.allInPlayPieces[i].possison == model.board[j].id) {
+                model.board[j].currentPiece = model.allInPlayPieces[i].id
+            }
+        }
     }
 }
