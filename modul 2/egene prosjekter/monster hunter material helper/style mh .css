@@ -14,7 +14,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: auto;
-    justify-items: center;
+    justify-items: stretch;
 }
 .sub-container{
     display: grid;

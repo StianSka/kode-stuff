@@ -98,8 +98,78 @@ const model = {
                     { name: 'Barroth', id: 10, },
                 ],
             },
+            {
+                name: 'Afflicted Blood',
+                level: '11-30',
+                monsters: [
+                    { name: 'Bishaten', id: 11, },
+                    { name: 'Daimyo Hermitaur', id: 12, },
+                    { name: 'Khezu', id: 13, },
+                    { name: 'Tetranadon', id: 14, },
+                ],
+            },
+            {
+                name: 'Afflicted Dragon Blood',
+                level: '31-100',
+                monsters: [
+                    { name: 'Bishaten', id: 11, },
+                    { name: 'Daimyo Hermitaur', id: 12, },
+                    { name: 'Khezu', id: 13, },
+                    { name: 'Tetranadon', id: 14, },
+                ],
+            },
+            {
+                name: 'Afflicted Pure Blood',
+                level: '101.200',
+                monsters: [
+                    { name: 'Bishaten', id: 11, },
+                    { name: 'Daimyo Hermitaur', id: 12, },
+                    { name: 'Khezu', id: 13, },
+                    { name: 'Tetranadon', id: 14, },
+                ],
+            },
+
+            {
+                name: 'Afflicted Shell',
+                level: '21-30',
+                monsters: [
+                    { name: 'Blood Orange Bishaten', id: 15, },
+                    { name: 'Shogun Ceanataur', id: 16, },
+                    { name: 'Jyuratodus', id: 17, },
+                    { name: 'Somnacanth', id: 18, },
+                ],
+            },
+            {
+                name: 'Afflicted Carapace',
+                level: '31-100',
+                monsters: [
+                    { name: 'Blood Orange Bishaten', id: 15, },
+                    { name: 'Shogun Ceanataur', id: 16, },
+                    { name: 'Jyuratodus', id: 17, },
+                    { name: 'Somnacanth', id: 18, },
+                ],
+            },
+            {
+                name: 'Afflicted Cortex',
+                level: '101.200',
+                monsters: [
+                    { name: 'Blood Orange Bishaten', id: 15, },
+                    { name: 'Shogun Ceanataur', id: 16, },
+                    { name: 'Jyuratodus', id: 17, },
+                    { name: 'Somnacanth', id: 18, },
+                ],
+            },
         ],
-        /*
+        
+        /*          { name: 'Bishaten', id: 11, },
+                    { name: 'Daimyo Hermitaur', id: 12, },
+                    { name: 'Khezu', id: 13, },
+                    { name: 'Tetranadon', id: 14, },
+                    { name: 'Blood Orange Bishaten', id: 15, },
+                    { name: 'Shogun Ceanataur', id: 16, },
+                    { name: 'Jyuratodus', id: 17, },
+                    { name: 'Somnacanth', id: 18, },
+
             'Anti-Wyvern Jewel 2'
             'Anti-Aerial Jewel 2'
             'Anti-Aquatic Jewel 2'
