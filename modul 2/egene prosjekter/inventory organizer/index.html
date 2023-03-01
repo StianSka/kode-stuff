@@ -22,29 +22,48 @@
 <body>
     <div id="app"></div>
 
-
     <script>
-
         uppdateView()
         function uppdateView() {
             let html
             let page = model.app.page;
-            if (page == 'stage') {
-                html = uppdateStageView();
-            };
-            if (page == 'loot') {
-                html = uppdateLootView();
-            };
-            if (page == 'inv') {
-                html = uppdateInvView();
-            };
-            if (page == 'inspect') {
-                html = uppdateInspectView();
-            };
+            if (page == 'stage') { html = uppdateStageView(); };
+            if (page == 'loot') { html = uppdateLootView(); };
+            if (page == 'inv') { html = uppdateInvView(); };
+            if (page == 'inspect') { html = uppdateInspectView(); };
             document.getElementById('app').innerHTML = html
         }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
 
-       // kode spørsmål hvis man har en construktor for objekter hovr skal den ligge 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getFirestore, collection } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDy_fh02NMfoZ3-zslbnlnJHe4h-oLNfE8",
+            authDomain: "test-ae21b.firebaseapp.com",
+            projectId: "test-ae21b",
+            storageBucket: "test-ae21b.appspot.com",
+            messagingSenderId: "60431533383",
+            appId: "1:60431533383:web:a6b42daa34e1c0a4993862"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+     
+        db.collection("test").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
 
     </script>
 </body>
