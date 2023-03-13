@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\bin\Debug\net7.0\wiki oppagver.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\bin\Debug\net7.0\wiki oppagver.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\bin\Debug\net7.0\wiki oppagver.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\bin\Debug\net7.0\wiki oppagver.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\bin\Debug\net7.0\wiki oppagver.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\refint\wiki oppagver.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\wiki oppagver.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\wiki oppagver\wiki oppagver\obj\Debug\net7.0\ref\wiki oppagver.dll
