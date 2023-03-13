@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\bin\Debug\net6.0\test c sharp.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\bin\Debug\net6.0\test c sharp.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\bin\Debug\net6.0\test c sharp.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\bin\Debug\net6.0\test c sharp.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\bin\Debug\net6.0\test c sharp.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\refint\test c sharp.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\test c sharp.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\test c sharp\test c sharp\obj\Debug\net6.0\ref\test c sharp.dll
