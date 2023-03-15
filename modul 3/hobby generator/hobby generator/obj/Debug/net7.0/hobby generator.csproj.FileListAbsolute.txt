@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\bin\Debug\net7.0\hobby generator.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\bin\Debug\net7.0\hobby generator.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\bin\Debug\net7.0\hobby generator.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\bin\Debug\net7.0\hobby generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\bin\Debug\net7.0\hobby generator.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\refint\hobby generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\hobby generator.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\hobby generator\hobby generator\obj\Debug\net7.0\ref\hobby generator.dll

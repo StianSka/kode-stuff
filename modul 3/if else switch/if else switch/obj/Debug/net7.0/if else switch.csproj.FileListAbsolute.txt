@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\bin\Debug\net7.0\if else switch.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\bin\Debug\net7.0\if else switch.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\bin\Debug\net7.0\if else switch.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\bin\Debug\net7.0\if else switch.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\bin\Debug\net7.0\if else switch.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\refint\if else switch.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\if else switch.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\if else switch\if else switch\obj\Debug\net7.0\ref\if else switch.dll

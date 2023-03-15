@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\bin\Debug\net7.0\løkke oppgave.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\bin\Debug\net7.0\løkke oppgave.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\bin\Debug\net7.0\løkke oppgave.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\bin\Debug\net7.0\løkke oppgave.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\bin\Debug\net7.0\løkke oppgave.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\refint\løkke oppgave.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\løkke oppgave.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\løkke oppgave\løkke oppgave\obj\Debug\net7.0\ref\løkke oppgave.dll
