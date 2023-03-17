@@ -1,0 +1,15 @@
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.csproj.AssemblyReference.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.AssemblyInfoInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.AssemblyInfo.cs
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.csproj.CoreCompileInputs.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\bin\Debug\net7.0\pasword generator.exe
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\bin\Debug\net7.0\pasword generator.deps.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\bin\Debug\net7.0\pasword generator.runtimeconfig.json
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\bin\Debug\net7.0\pasword generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\bin\Debug\net7.0\pasword generator.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\refint\pasword generator.dll
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.pdb
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\pasword generator.genruntimeconfig.cache
+C:\Users\stian\Documents\GitHub\kode-stuff\modul 3\pasword generator\pasword generator\obj\Debug\net7.0\ref\pasword generator.dll
